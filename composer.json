@@ -1,0 +1,31 @@
+{
+    "name": "insid/blogonslim",
+    "description": "Slim Demo project starter",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "files": [
+            "./app/helpers.php"
+        ],
+        "psr-4": {
+            "Insid\\Blogonslim\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "arakviel",
+            "email": "insider.arakviel@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=8.1",
+        "slim/slim": "4.*",
+        "guzzlehttp/psr7": "^2.6",
+        "php-di/php-di": "^7.0",
+        "jenssegers/blade": "^2.0"
+    },
+    "scripts": {
+        "start": "php -S localhost:8081 -t public"
+    }
+}
