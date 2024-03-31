@@ -2,3 +2,4 @@
 vendor
 storage/cache
 composer.lock
+.env

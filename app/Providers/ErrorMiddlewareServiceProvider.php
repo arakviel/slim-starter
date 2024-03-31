@@ -8,12 +8,9 @@ class ErrorMiddlewareServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        $this->app->add(new WhoopsMiddleware());
-        /*        $this->app->addErrorMiddleware(
-                    config('middleware.error_details.displayErrorDetails'),
-                    config('middleware.error_details.logErrors'),
-                    config('middleware.error_details.logErrorDetails')
-                );*/
+        if (env('APP_DEBUG', false)) {
+            $this->app->add(new WhoopsMiddleware());
+        }
     }
 
     public function boot(): void
