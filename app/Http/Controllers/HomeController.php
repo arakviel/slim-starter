@@ -2,17 +2,27 @@
 
 namespace Insid\Blogonslim\Http\Controllers;
 
-use Insid\Blogonslim\Persistence\Entity\Post;
-use Insid\Blogonslim\Persistence\Entity\User;
+use Illuminate\Database\Capsule\Manager;
+use Illuminate\Support\Str;
+use Insid\Blogonslim\Models\User;
 use Insid\Blogonslim\Support\View;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
 class HomeController
 {
-    public function index(View $view, Response $response, $args = []): Response
+    public function index(Manager $db, View $view, Response $response, $args = []): Response
     {
+        Str::
+
         $hello = "Привіт Чернівці! з контролера";
+        //$users = $db->table('users')->get();
+        $petro = User::query()
+            ->where('age', '>', 19)
+            ->first();
+        $petro->age = 50;
+        $petro->save();
+        dd($petro);
         return $view('home.index', compact('hello'));
     }
 
