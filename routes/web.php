@@ -8,6 +8,6 @@ use Insid\Blogonslim\Support\Route;
 /*Route::get('/', [HomeController::class, 'index']);
 Route::get('/{name}', [HomeController::class, 'show']);*/
 
-$app->get('/', [HomeController::class, 'index']);
-//Route::get('/', 'HomeController@index');
+//$app->get('/', [HomeController::class, 'index']);
+Route::get('/', 'HomeController@index');
 Route::get('/{name}', 'HomeController@show');

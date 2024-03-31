@@ -44,6 +44,7 @@ class Route
         $method = Str::after($action, '@');
 
         $controller = config('routing.controllers.namespace') . $class;
+        dd($controller);
 
         return [$controller, $method];
     }
