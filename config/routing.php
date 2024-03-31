@@ -2,6 +2,6 @@
 
 return [
     'controllers' => [
-        'namespace' => '\\Insid\\Blogonslim\\Http\\Containers\\'
+        'namespace' => '\\Insid\\Blogonslim\\Http\\Controllers\\'
     ]
 ];
