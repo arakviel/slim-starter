@@ -26,6 +26,7 @@
     "jenssegers/blade": "^2.0",
     "ext-curl": "*",
     "ext-json": "*",
+    "ext-pdo": "*",
     "php-di/slim-bridge": "^3.4"
   },
   "scripts": {
